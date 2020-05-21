@@ -1,0 +1,100 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1625BD14-9D89-461A-8B2F-6D5C073C3056}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ClassLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>MyCustomBattle</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="TaleWorlds.Core">
+      <HintPath>G:\steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="TaleWorlds.Engine">
+      <HintPath>G:\steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="TaleWorlds.Library">
+      <HintPath>G:\steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="TaleWorlds.Localization">
+      <HintPath>G:\steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="TaleWorlds.MountAndBlade">
+      <HintPath>G:\steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArmyCompositionGroup.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Backup\ArmyCompositionGroup.cs" />
+    <Compile Include="Backup\AssemblyInfo.cs" />
+    <Compile Include="Backup\CustomBattleMenuSideVM.cs" />
+    <Compile Include="Backup\CustomBattleMenuVM.cs" />
+    <Compile Include="Backup\CustomBattleScreen.cs" />
+    <Compile Include="Backup\CustomBattleSubModule.cs" />
+    <Compile Include="Backup\CustomBattleViews.cs" />
+    <Compile Include="Backup\CustomBattle\CustomBattleSiegeMachineVM.cs" />
+    <Compile Include="Backup\CustomBattle\GameTypeSelectionGroup.cs" />
+    <Compile Include="Backup\CustomBattle\MapSelectionElement.cs" />
+    <Compile Include="Backup\CustomBattle\MapSelectionGroup.cs" />
+    <Compile Include="Backup\CustomBattle\MapSelection\MapSelectionResultItemVM.cs" />
+    <Compile Include="Backup\SelectionGroup.cs" />
+    <Compile Include="CustomBattleMenuSideVM.cs" />
+    <Compile Include="CustomBattleMenuVM.cs" />
+    <Compile Include="CustomBattleScreen.cs" />
+    <Compile Include="CustomBattleSubModule.cs" />
+    <Compile Include="CustomBattleViews.cs" />
+    <Compile Include="CustomBattle\CustomBattleSiegeMachineVM.cs" />
+    <Compile Include="CustomBattle\GameTypeSelectionGroup.cs" />
+    <Compile Include="CustomBattle\MapSelectionElement.cs" />
+    <Compile Include="CustomBattle\MapSelectionGroup.cs" />
+    <Compile Include="CustomBattle\MapSelection\MapSelectionResultItemVM.cs" />
+    <Compile Include="SelectionGroup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Backup\TaleWorlds.MountAndBlade.CustomBattle.sln" />
+    <Content Include="TaleWorlds.MountAndBlade.CustomBattle.pdb" />
+    <Content Include="UpgradeLog.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".vs\TaleWorlds.MountAndBlade.CustomBattle\v16\.suo" />
+    <None Include="Backup\TaleWorlds.MountAndBlade.CustomBattle.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".vs\MyCustomBattle\v16\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
